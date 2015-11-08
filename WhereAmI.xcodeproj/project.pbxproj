@@ -14,6 +14,8 @@
 		8D045BA61BD9BD06007686B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D045BA41BD9BD06007686B8 /* LaunchScreen.storyboard */; };
 		8D045BB11BD9BD06007686B8 /* WhereAmITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D045BB01BD9BD06007686B8 /* WhereAmITests.swift */; };
 		8D045BBC1BD9BD06007686B8 /* WhereAmIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D045BBB1BD9BD06007686B8 /* WhereAmIUITests.swift */; };
+		8DB7E1471BD9D5F100845765 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7E1461BD9D5F100845765 /* Place.swift */; settings = {ASSET_TAGS = (); }; };
+		8DB7E1491BD9D8E100845765 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7E1481BD9D8E100845765 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8D045BB71BD9BD06007686B8 /* WhereAmIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereAmIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D045BBB1BD9BD06007686B8 /* WhereAmIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereAmIUITests.swift; sourceTree = "<group>"; };
 		8D045BBD1BD9BD06007686B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB7E1461BD9D5F100845765 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		8DB7E1481BD9D8E100845765 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB7E1491BD9D8E100845765 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,7 @@
 		8D045B8F1BD9BD06007686B8 = {
 			isa = PBXGroup;
 			children = (
+				8DB7E1481BD9D8E100845765 /* MapKit.framework */,
 				8D045B9A1BD9BD06007686B8 /* WhereAmI */,
 				8D045BAF1BD9BD06007686B8 /* WhereAmITests */,
 				8D045BBA1BD9BD06007686B8 /* WhereAmIUITests */,
@@ -103,6 +109,7 @@
 				8D045BA21BD9BD06007686B8 /* Assets.xcassets */,
 				8D045BA41BD9BD06007686B8 /* LaunchScreen.storyboard */,
 				8D045BA71BD9BD06007686B8 /* Info.plist */,
+				8DB7E1461BD9D5F100845765 /* Place.swift */,
 			);
 			path = WhereAmI;
 			sourceTree = "<group>";
@@ -193,6 +200,11 @@
 					8D045B971BD9BD06007686B8 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = Y8SW87HD9M;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8D045BAB1BD9BD06007686B8 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -258,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB7E1471BD9D5F100845765 /* Place.swift in Sources */,
 				8D045B9E1BD9BD06007686B8 /* ViewController.swift in Sources */,
 				8D045B9C1BD9BD06007686B8 /* AppDelegate.swift in Sources */,
 			);
@@ -486,6 +499,7 @@
 				8D045BC21BD9BD06007686B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D045BC31BD9BD06007686B8 /* Build configuration list for PBXNativeTarget "WhereAmITests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +508,7 @@
 				8D045BC51BD9BD06007686B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D045BC61BD9BD06007686B8 /* Build configuration list for PBXNativeTarget "WhereAmIUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +517,7 @@
 				8D045BC81BD9BD06007686B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
